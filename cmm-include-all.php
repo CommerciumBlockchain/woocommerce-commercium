@@ -1,14 +1,14 @@
 <?php
 /**
 Commercium for WooCommerce
-https://github.com/CommerciumBlockchian/commercium-for-woocommerce
+https://github.com/CommerciumBlockchain/woocommerce-commercium
  */
 
 //---------------------------------------------------------------------------
 // Global definitions
 if (!defined('CMM_PLUGIN_NAME'))
   {
-  define('CMM_VERSION',           '0.0.1');
+  define('CMM_VERSION',           '1.0.0');
 
   //-----------------------------------------------
   define('CMM_EDITION',           'Standard');
@@ -35,13 +35,13 @@ if (defined('CMM_MUST_LOAD_WP') && !defined('WP_USE_THEMES') && !defined('ABSPAT
    {
    $g_blog_dir = preg_replace ('|(/+[^/]+){4}$|', '', str_replace ('\\', '/', __FILE__)); // For love of the art of regex-ing
    define('WP_USE_THEMES', false);
-   require_once ($g_blog_dir . '/wp-blog-header.php');
+  // require_once ($g_blog_dir . '/wp-blog-header.php');
 
    // Force-elimination of header 404 for non-wordpress pages.
    header ("HTTP/1.1 200 OK");
    header ("Status: 200 OK");
 
-   require_once ($g_blog_dir . '/wp-admin/includes/admin.php');
+  // require_once ($g_blog_dir . '/wp-admin/includes/admin.php');
    }
 //------------------------------------------
 
