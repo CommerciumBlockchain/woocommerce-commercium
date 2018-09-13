@@ -1,12 +1,12 @@
-=== Commercium for Woocommerce ===
-Contributors: commercium
-Donate link: https://commercium.net/
-Tags: commercium, payments, cmm, cryptocurrency, payment, woocommerce, crypto
-Requires at least: Wordpress 3.0.1
-Tested up to: Wordpress 4.9.7
-Requires PHP: 7.0
-Stable tag: trunk
-License: GPLv2 or later
+=== Commercium for Woocommerce ===      
+Contributors: commercium    
+Donate link: https://commercium.net/    
+Tags: commercium, payments, cmm, cryptocurrency, payment, woocommerce, crypto    
+Requires at least: Wordpress 3.0.1    
+Tested up to: Wordpress 4.9.7    
+Requires PHP: 7.0    
+Stable tag: trunk    
+License: GPLv2 or later    
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Commercium for Woocommerce allows you to accept commercium payments on your WooCommerce store.
