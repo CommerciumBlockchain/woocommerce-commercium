@@ -1,7 +1,7 @@
 <?php
 /**
  * Commercium for WooCommerce
- * https://github.com/CommerciumBlockchian/commercium-for-woocommerce
+ * https://github.com/CommerciumBlockchain/woocommerce-commercium
  */
 
 
@@ -29,8 +29,7 @@ function CMM__plugins_loaded__load_commercium_gateway()
      *
      * @class        CMM_Commercium
      * @extends        WC_Payment_Gateway
-     * @version
-     * @package
+     * @version         1.0.0
      * @author        mboyd1
      */
     class CMM_Commercium extends WC_Payment_Gateway
