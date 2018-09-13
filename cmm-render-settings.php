@@ -1,7 +1,7 @@
 <?php
 /**
 Commercium for WooCommerce
-https://github.com/CommerciumBlockchian/commercium-for-woocommerce
+https://github.com/CommerciumBlockchain/woocommerce-commercium
  */
 
 // Include everything
@@ -18,6 +18,9 @@ function CMM__render_settings_page ($menu_page_name)
 
    if (isset ($_POST['button_update_cmm_settings']))
       {
+        check_admin_referer( 'cmm-settings' ); // CSRF protection
+        if ( !current_user_can( 'manage_options' ) ) // Access control
+          wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
       CMM__update_settings ("", false);
 echo <<<HHHH
 <div align="center" style="background-color:#FFFFE0;padding:5px;font-size:120%;border: 1px solid #E6DB55;margin:5px;border-radius:3px;">
@@ -27,6 +30,9 @@ HHHH;
       }
    else if (isset($_POST['button_reset_cmm_settings']))
       {
+        check_admin_referer( 'cmm-settings' ); // CSRF protection
+		if ( !current_user_can( 'manage_options' ) ) // Access control
+			wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
       CMM__reset_all_settings (false);
 echo <<<HHHH
 <div align="center" style="background-color:#FFFFE0;padding:5px;font-size:120%;border: 1px solid #E6DB55;margin:5px;border-radius:3px;">
@@ -36,6 +42,10 @@ HHHH;
       }
    else if (isset($_POST['button_reset_partial_CMM_settings']))
       {
+
+        check_admin_referer( 'cmm-settings' ); // CSRF protection
+		if ( !current_user_can( 'manage_options' ) ) // Access control
+			wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
       CMM__reset_partial_settings (false);
 echo <<<HHHH
 <div align="center" style="background-color:#FFFFE0;padding:5px;font-size:120%;border: 1px solid #E6DB55;margin:5px;border-radius:3px;">
@@ -45,6 +55,9 @@ HHHH;
       }
    else if (isset($_POST['validate_cmm-license']))
       {
+        check_admin_referer( 'cmm-settings' ); // CSRF protection
+		if ( !current_user_can( 'manage_options' ) ) // Access control
+			wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
       CMM__update_settings ("", false);
       }
 
@@ -110,6 +123,7 @@ function CMM__render_general_settings_page_html ()
 ?>
 
     <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+      <?php wp_nonce_field( 'cmm-settings' ); ?>
       <p class="submit">
         <input type="submit" class="button-primary"    name="button_update_cmm_settings"        value="<?php _e('Save Changes') ?>"             />
         <input type="submit" class="button-secondary"  style="color:red;" name="button_reset_partial_cmm_settings" value="<?php _e('Reset settings') ?>" onClick="return confirm('Are you sure you want to reset settings on this page?');" />
@@ -278,7 +292,7 @@ function CMM__render_advanced_settings_page_html ()
 
 ?>
       </table>
-
+      <?php wp_nonce_field( 'cmm-settings' ); ?>
       <p class="submit">
           <input type="submit" class="button-primary"    name="button_update_cmm_settings"        value="{$value_save_changes}"             />
           <input type="submit" class="button-secondary"  style="color:red;" name="button_reset_partial_cmm_settings" value="{$value_reset_settings}" onClick="return confirm('Are you sure you want to reset settings on this page?');" />
