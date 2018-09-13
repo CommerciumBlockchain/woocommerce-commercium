@@ -1,8 +1,10 @@
 === Commercium for Woocommerce ===
-Contributors: Commercium team
+Contributors: commercium
+Donate link: https://commercium.net/
 Tags: commercium, payments, cmm, cryptocurrency, payment, woocommerce, crypto
 Requires at least: Wordpress 3.0.1
-Tested up to: Wordpress 4.8.1
+Tested up to: Wordpress 4.9.7
+Requires PHP: 7.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -35,9 +37,17 @@ This plugin requires Woocommerce. Please make sure you have Woocommerce installe
 	* Select the downloaded plugin and click "Install Now".
 	* Select "Activate Plugin" to complete installation.
 
+== Frequently Asked Questions ==
+
+= Does this plugin work with newest WP version and also older versions? =
+Yes, this plugin works well with the latest version of WordPress and requires atleast WP 3.0.1
+
 == Screenshots ==
 
-Todo Add screenshots
+1. Commercium for woocommerce page - options.
+2. Displays pay with Commercium option on the shopping checkout page.
+3. Displays order confirmation and Commercium payment details for customer.
+4. Woocommerce order detail and approval page for seller.
 
 == Remove plugin ==
 
@@ -51,6 +61,11 @@ Todo Add screenshots
 
 
 == Changelog ==
+
 = 1.0.0 =
 * First release
-# woocommerce-commercium
+
+== Upgrade Notice ==
+
+= 1.0.0 =
+Initial Release
