@@ -1,7 +1,7 @@
 <?php
 /**
 Commercium for WooCommerce
-https://github.com/CommerciumBlockchian/commercium-for-woocommerce
+https://github.com/CommerciumBlockchain/woocommerce-commercium
  */
 
 // Include everything
@@ -198,6 +198,9 @@ function CMM__update_settings ($cmm_use_these_settings = false, $also_update_per
       {
       if (isset($_POST[$k]))
          {
+          check_admin_referer( 'cmm-settings' ); // CSRF protection 
+          if ( !current_user_can( 'manage_options' ) ) // Access control 
+          wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
          if (!isset($cmm_settings[$k]))
             $cmm_settings[$k] = ""; // Force set to something.
          CMM__update_individual_cmm_setting ($cmm_settings[$k], $_POST[$k]);
@@ -259,6 +262,9 @@ function CMM__reset_partial_settings ($also_reset_persistent_settings = false)
 
    foreach ($_POST as $k=>$v)
       {
+        check_admin_referer( 'cmm-settings' ); // CSRF protection 
+        if ( !current_user_can( 'manage_options' ) ) // Access control 
+        wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
       if (isset($g_CMM__config_defaults[$k]))
          {
          if (!isset($cmm_settings[$k]))

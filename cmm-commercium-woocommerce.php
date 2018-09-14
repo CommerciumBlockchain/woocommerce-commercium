@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Commercium for WooCommerce
- * Plugin URI: https://github.com/CommerciumBlockchian/commercium-for-woocommerce
+ * Plugin URI: https://github.com/CommerciumBlockchain/woocommerce-commercium
  * Description: Commercium for WooCommerce plugin allows you to accept payments in Commercium for physical and digital products at your WooCommerce-powered online store.
  * Version: 1.0.0
  * Author: Commercium Team

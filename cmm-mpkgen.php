@@ -1,6 +1,5 @@
 <?php
 
-// https://github.com/bkkcoins/misc
 //
 // Example using GenAddress as a cmd line utility
 //

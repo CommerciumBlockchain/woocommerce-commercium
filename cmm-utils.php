@@ -1,7 +1,7 @@
 <?php
 /**
 Commercium for WooCommerce
-https://github.com/CommerciumBlockchian/commercium-for-woocommerce
+https://github.com/CommerciumBlockchain/woocommerce-commercium
 */
 
 function CMM__get_address_for_payment__electrum($electrum_mpk, $order_info)

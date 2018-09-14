@@ -1,7 +1,7 @@
 <?php
 /**
 Commercium for WooCommerce
-https://github.com/CommerciumBlockchian/commercium-for-woocommerce
+https://github.com/CommerciumBlockchain/woocommerce-commercium
  */
 
 
